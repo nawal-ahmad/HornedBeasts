@@ -1,6 +1,6 @@
 Number and name of feature: 
 
-1. Passing props from main to HornedBeast
+1. Feature #1: Display images
 
 Estimate of time needed to complete: 15 minutes or less
 
@@ -11,7 +11,7 @@ Finish time: 4:30 pm
 Actual time needed to complete: 30 minutes 
 <br/>
 
-1. Counting votes on each image
+2. Feature #2: Allow users to vote for their favorite beast
 
 Estimate of time needed to complete: 15 minutes or less
 
