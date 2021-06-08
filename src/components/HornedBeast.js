@@ -21,9 +21,8 @@ class HornedBeast extends React.Component {
             <div>
                 <div>
                     <h2>{this.props.title}</h2>
-                    <img src={this.props.img} alt={this.props.title} style={{ width: '15rem' }}></img>
+                    <img src={this.props.img} alt={this.props.title} onClick = {this.likes} style={{ width: '15rem' }}></img>
                     <p>{this.props.description}</p>
-                    <button onClick = {this.likes}> Like !</button>
                     <div>❤️ {this.state.numberOfLikes}</div> 
                 </div>
             </div>
