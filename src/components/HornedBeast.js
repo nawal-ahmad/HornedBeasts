@@ -22,7 +22,7 @@ class HornedBeast extends React.Component {
         return (
            <div class="card-deck" style={{display:'inline-flex'}}>
 
-            <Card style={{width:'18rem'}}>
+            <Card style={{width:'18.9rem'}}>
                 <Card.Img variant="top" src={this.props.img} alt={this.props.title}  style={{height:'17rem'}} onClick={ () => {
                     this.likes();
                     this.props.handleShow (this.props)

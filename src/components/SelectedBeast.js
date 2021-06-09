@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 class SelectedBeast extends React.Component {
@@ -23,9 +23,9 @@ class SelectedBeast extends React.Component {
                         </Card>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleShow}>
+                        <Button variant="secondary" onClick={this.props.handleShow}>
                             Close
-                    </Button>
+                        </Button>
                   </Modal.Footer>
                 </Modal>
 

@@ -23,7 +23,11 @@ class App extends React.Component {
       selectedProps: previousProps
     })
    }
-
+   closing=(previousProps) => {
+    this.setState({
+      show: false,
+    })
+   }
 
   render() {
     return (
