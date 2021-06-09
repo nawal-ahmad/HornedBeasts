@@ -17,7 +17,7 @@ class Main extends React.Component {
                                 title={beast.title}
                                 img={beast.image_url}
                                 description={beast.description}
-                                select={this.props.handleShow}
+                                handleShow={this.props.handleShow}
                             />
                         )
                     })

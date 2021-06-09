@@ -18,16 +18,16 @@ class HornedBeast extends React.Component {
 
 
     render() {
-        
+    
         return (
            <div class="card-deck" style={{display:'inline-flex'}}>
 
             <Card style={{width:'18rem'}}>
                 <Card.Img variant="top" src={this.props.img} alt={this.props.title}  style={{height:'17rem'}} onClick={ () => {
                     this.likes();
-                    this.props.handleShow (
-                        this.props
-                    )}}/>
+                    this.props.handleShow (this.props)
+                }
+                    }/>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
