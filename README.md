@@ -33,6 +33,16 @@ Finish time: 2:45 pm
 
 Actual time needed to complete: 45 minutes, I stucked!
 
+4. Feature 4: Display a Modal
+
+Estimate of time needed to complets: 30 minutes maybe
+
+Start time: pm
+
+Finish time: pm
+
+Actual time needed to complete: Hours
+
 
 
 # Getting Started with Create React App
