@@ -12,35 +12,30 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      HornedBeastDataData: HornedBeastData,
-      select: false,
+      selectedProps: {},
+      show: false,
     }
   }
 
-   handleShow=() => {
+   handleShow=(previousProps) => {
     this.setState({
-      select:true
+      show: !this.state.show,
+      selectedProps: previousProps
     })
    }
-   handleClose=()=>{
-    this.setState({
-      select:false
-    })
-   }
- 
+
 
   render() {
     return (
       <div>
         <Header />
         <Main 
-        HornedBeastData = {this.state.HornedBeastData}
+        HornedBeastData = {HornedBeastData}
         handleShow={this.handleShow}
         />
         <SelectedBeast
-        HornedBeastData = {this.state.HornedBeastData}
-        select={this.state.select}
-        handleClose={this.handleClose}
+        show={this.state.show}
+        selectedProps={this.state.selectedProps}
         />
         <Footer />
       </div>
