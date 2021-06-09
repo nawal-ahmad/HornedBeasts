@@ -4,17 +4,27 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 class Main extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state({
+  //     hornsNum: '',
+  //   });
+  // }
+  // filterBeast = (e) => {
+  //   this.setState({
+  //     hornsNum: e.target.value,
+  //   });
+  // };
+
   render() {
     return (
       <div>
-        <Form onSubmit={this.filter}>
-          <Form.Group controlId='exampleForm.ControlSelect1'>
-            <Form.Label>Choose Number of Horns: </Form.Label>
+        <Form className='p-3'>
+          <Form.Group>
+            <Form.Label>Please select number of horns to select!</Form.Label>
             <Form.Control
-              onChange={this.newState}
               as='select'
-              name='numberOfHorns'
-              defaultValue={'All'}
+              //  onChange={this.filterBeast}
             >
               <option value='All'>All</option>
               <option value='1'>1</option>
