@@ -1,11 +1,14 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 class Footer extends React.Component {
     render() {
         return (
-            <footer>
-                <span>Author: Nawal Ahmad</span>
-            </footer>
+            <Card>
+                <Card.Body>
+                    <Card.Title>Author: Nawal Ahmad</Card.Title>
+              </Card.Body>
+            </Card>
         )
     }
 }

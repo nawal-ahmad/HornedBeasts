@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
 
@@ -11,22 +12,34 @@ class HornedBeast extends React.Component {
 
     likes = () => {
         this.setState({
-            numberOfLikes: this.state.numberOfLikes +=1
-          });
+            numberOfLikes: this.state.numberOfLikes += 1
+        });
     }
 
 
     render() {
+    
         return (
-            <div>
-                <div>
-                    <h2>{this.props.title}</h2>
-                    <img src={this.props.img} alt={this.props.title} onClick = {this.likes} style={{ width: '15rem' }}></img>
-                    <p>{this.props.description}</p>
-                    <div>❤️ {this.state.numberOfLikes}</div> 
-                </div>
-            </div>
+           <div class="card-deck" style={{display:'inline-flex'}}>
 
+            <Card style={{width:'18rem'}}>
+                <Card.Img variant="top" src={this.props.img} alt={this.props.title}  style={{height:'17rem'}} onClick={ () => {
+                    this.likes();
+                    this.props.handleShow (this.props)
+                }
+                    }/>
+                <Card.Body>
+                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Text>
+                        {this.props.description}
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    ❤️ {this.state.numberOfLikes}
+                </Card.Footer>
+            </Card>
+
+            </div>
         )
     }
 }
