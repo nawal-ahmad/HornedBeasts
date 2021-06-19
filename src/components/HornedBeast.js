@@ -15,23 +15,24 @@ class HornedBeast extends React.Component {
     });
   };
 
-  update = () => {
-    this.props.selectedUpdate(this.props.title);
+  ShowModalMethod = () => {
+    this.props.handleShow(this.props.title);
   };
 
   render() {
     return (
-      <div class='card-deck' style={{ display: 'inline-flex' }}>
+      <div
+        class='card-deck'
+        style={{ display: 'inline-flex' }}
+        onClick={this.ShowModalMethod}
+      >
         <Card style={{ width: '18.9rem' }}>
           <Card.Img
             variant='top'
             src={this.props.img}
             alt={this.props.title}
             style={{ height: '17rem' }}
-            onClick={() => {
-              this.likes();
-              this.props.handleShow(this.props);
-            }}
+            onClick={this.likes}
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>

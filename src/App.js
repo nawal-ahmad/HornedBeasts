@@ -9,28 +9,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      allBeasts: HornedBeastData,
       selectedProps: {},
       show: false,
     };
   }
 
-  handleShow = (previousProps) => {
+  handleShow = (title) => {
+    const selectedProps = this.state.allBeasts.find(
+      (beast) => beast.title === title
+    );
+
     this.setState({
-      show: !this.state.show,
-      selectedProps: previousProps,
+      show: true,
+      selectedProps: selectedProps,
     });
+  };
+  handleClose = () => {
+    this.setState({ show: false });
+  };
+
+  updateBeasts = (allBeasts) => {
+    this.setState({
+      allBeasts: allBeasts,
+    });
+    // console.log(horns);
   };
 
   render() {
     return (
       <div>
         <Header />
-        <Main HornedBeastData={HornedBeastData} handleShow={this.handleShow} />
+        <Main
+          allBeasts={this.state.allBeasts}
+          handleShow={this.handleShow}
+          displayFiltered={this.updateBeasts}
+        />
         <SelectedBeast
           show={this.state.show}
           selectedProps={this.state.selectedProps}
+          handleClose={this.handleClose}
         />
         <Footer />
       </div>
